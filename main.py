@@ -1,8 +1,6 @@
 import tkinter as tk
 
 
-
-
 def main():
 
     window = tk.Tk()
@@ -37,7 +35,9 @@ def main():
     frame_order = tk.Frame(window, width=800, height=500, bd=1, relief="solid")
     frame_order.grid_propagate(False)  # Evita que el frame se ajuste al contenido
     frame_order.grid(row=1, column=0, pady=2)
-    
+
+    # Lista que recibe pedidos en forma de dicts
+    orders = []
 
     # Cantidad
     cant_label = tk.Label(frame_order, text="Cantidad")
@@ -54,9 +54,6 @@ def main():
     # Subtotal
     subtotal_label = tk.Label(frame_order, text="Subtotal")
     subtotal_label.grid(row=0, column=3, padx=50, pady=5)
-    
-
-    
 
     window.mainloop()
 
